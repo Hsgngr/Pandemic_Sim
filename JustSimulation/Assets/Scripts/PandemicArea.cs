@@ -10,17 +10,16 @@ public class PandemicArea : MonoBehaviour
     [Tooltip("Range of the area")]
     public float range;
 
-    [Header("DummyBots")]
+    [Header("Bot settings")]
     public GameObject dummyBot;
     public int healthyBotCount;
     public int infectedBotCount;
 
     //List of DummyBots
-    public List<GameObject> dummyBotList = new List<GameObject>();
-    [Space(10)]
+    private List<GameObject> dummyBotList = new List<GameObject>();
 
 
-    [Header("InfectionSettings")]
+    [Header("Infection Settings")]
     [Tooltip("The maximum possible distance for exposure to occur aka radius (Default 8f)")]
     public float exposureRadius = 8f;
 
@@ -32,11 +31,11 @@ public class PandemicArea : MonoBehaviour
     public float recoverTime = 50f;
 
     [Header("SIR Model")]
-    //[System.NonSerialized]
+    [System.NonSerialized]
     public int healthyCounter;
-    //[System.NonSerialized]
+    [System.NonSerialized]
     public int infectedCounter = 0;
-    //[System.NonSerialized]
+    [System.NonSerialized]
     public int recoveredCounter = 0;
 
     /// <summary>
