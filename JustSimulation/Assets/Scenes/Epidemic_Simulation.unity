@@ -425,18 +425,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf631f795c5b164ba4e2f9f8ac7a007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 50
+  range: 100
   dummyBot: {fileID: 2786648394365923647, guid: 1130640579d97324a8d9e3024fba3d55,
     type: 3}
   healthyBotCount: 50
   infectedBotCount: 1
-  dummyBotList: []
-  exposureRadius: 8
-  infectionCoeff: 50
+  exposureRadius: 5
+  infectionCoeff: 100
   recoverTime: 50
-  healthyCounter: 0
-  infectedCounter: 0
-  recoveredCounter: 0
+  exportObj: {fileID: 0}
 --- !u!4 &967556429
 Transform:
   m_ObjectHideFlags: 0

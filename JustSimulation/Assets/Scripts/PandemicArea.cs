@@ -31,13 +31,44 @@ public class PandemicArea : MonoBehaviour
     public float recoverTime = 50f;
 
     [Header("SIR Model")]
+    private GameObject exportObj;
     [System.NonSerialized]
     public int healthyCounter;
     [System.NonSerialized]
     public int infectedCounter = 0;
+
     [System.NonSerialized]
     public int recoveredCounter = 0;
 
+    public int HealthyCounter
+    {
+        get => healthyCounter;
+        set
+        {
+            healthyCounter = value;
+            exportObj.GetComponent<ExportCsv>().record();
+        }
+    }
+    public int InfectedCounter
+    {
+        get => infectedCounter;
+        set
+        {
+            infectedCounter = value;
+            exportObj.GetComponent<ExportCsv>().record();
+        }
+    }
+
+    public int RecoveredCounter
+    {
+        get => recoveredCounter;
+        set
+        {
+            recoveredCounter = value;
+            exportObj.GetComponent<ExportCsv>().record();
+        }
+    }
+     
     /// <summary>
     /// Creates objects in random position at given amount
     /// </summary>
@@ -90,7 +121,9 @@ public class PandemicArea : MonoBehaviour
     {
         //Reset infectedCounter and healthyCounter
         infectedCounter = 0;
-        healthyCounter = healthyBotCount +infectedBotCount; //Count all of them and infected ones will be removed from DummyBot.cs
+        HealthyCounter = healthyBotCount + infectedBotCount; //Count all of them and infected ones will be removed from DummyBot.cs
+        recoveredCounter = 0;
+
 
         //If its first time then List should be empty, Check if it empty
         if (dummyBotList.Count == 0)
@@ -127,6 +160,10 @@ public class PandemicArea : MonoBehaviour
 
     public void Awake()
     {
+        exportObj = GetComponentInChildren<ExportCsv>().gameObject;
+        exportObj.GetComponent<ExportCsv>().addHeaders();
+        
+
         ResetPandemicArea();
     }
     public void Update()

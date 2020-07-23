@@ -75,13 +75,13 @@ public class DummyBot : MonoBehaviour
             case agentStatus.INFECTED:
                 GetComponentInChildren<Renderer>().material = infectiousMaterial;
                 pandemicAreaObj.GetComponent<PandemicArea>().healthyCounter--;
-                pandemicAreaObj.GetComponent<PandemicArea>().infectedCounter++;
+                pandemicAreaObj.GetComponent<PandemicArea>().InfectedCounter++;
                 //Add - reward here.
                 break;
             case agentStatus.RECOVERED:
                 GetComponentInChildren<Renderer>().material = recoveredMaterial;
-                pandemicAreaObj.GetComponent<PandemicArea>().infectedCounter--;
-                pandemicAreaObj.GetComponent<PandemicArea>().recoveredCounter++;               
+                pandemicAreaObj.GetComponent<PandemicArea>().InfectedCounter--;
+                pandemicAreaObj.GetComponent<PandemicArea>().RecoveredCounter++;               
                 break;
         }
     }
