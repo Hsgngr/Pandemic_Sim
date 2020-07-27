@@ -309,6 +309,11 @@ PrefabInstance:
       propertyPath: healthyBotCount
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1635820113935811692, guid: cc0b4b1857a3d10498dbcc0fcf7e4f9b,
+        type: 3}
+      propertyPath: infectedBotCount
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1635820113935811693, guid: cc0b4b1857a3d10498dbcc0fcf7e4f9b,
         type: 3}
       propertyPath: m_LocalPosition.x
