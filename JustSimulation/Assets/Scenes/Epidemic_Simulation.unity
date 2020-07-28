@@ -294,6 +294,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1241059212649031747, guid: cc0b4b1857a3d10498dbcc0fcf7e4f9b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241059212649031747, guid: cc0b4b1857a3d10498dbcc0fcf7e4f9b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241059212649031747, guid: cc0b4b1857a3d10498dbcc0fcf7e4f9b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1635820113833440515, guid: cc0b4b1857a3d10498dbcc0fcf7e4f9b,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -307,12 +322,27 @@ PrefabInstance:
     - target: {fileID: 1635820113935811692, guid: cc0b4b1857a3d10498dbcc0fcf7e4f9b,
         type: 3}
       propertyPath: healthyBotCount
-      value: 100
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 1635820113935811692, guid: cc0b4b1857a3d10498dbcc0fcf7e4f9b,
         type: 3}
       propertyPath: infectedBotCount
-      value: 10
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635820113935811692, guid: cc0b4b1857a3d10498dbcc0fcf7e4f9b,
+        type: 3}
+      propertyPath: range
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635820113935811692, guid: cc0b4b1857a3d10498dbcc0fcf7e4f9b,
+        type: 3}
+      propertyPath: recoverTime
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635820113935811692, guid: cc0b4b1857a3d10498dbcc0fcf7e4f9b,
+        type: 3}
+      propertyPath: infectionCoeff
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1635820113935811693, guid: cc0b4b1857a3d10498dbcc0fcf7e4f9b,
         type: 3}
