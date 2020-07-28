@@ -34,8 +34,9 @@ df.insert(1,'HealthyCount',x)
     
 
 #By using kmeans grouping the point to decrease noise.
+cluster_number = 100
 
-kmeans = KMeans(n_clusters=20)
+kmeans = KMeans(n_clusters=cluster_number)
 kmeans.fit(df)
 y_kmeans = kmeans.predict(df)
 centers = kmeans.cluster_centers_
@@ -65,7 +66,7 @@ df2.insert(1,'InfectedCount',x2)
 
 #By using kmeans grouping the point to decrease noise.
 
-kmeans = KMeans(n_clusters=20)
+kmeans = KMeans(n_clusters=cluster_number)
 kmeans.fit(df2)
 y_kmeans = kmeans.predict(df2)
 centers = kmeans.cluster_centers_
@@ -92,7 +93,7 @@ df3.insert(1,'RecoveredCount',x3)
 
 #By using kmeans grouping the point to decrease noise.
 
-kmeans = KMeans(n_clusters=20)
+kmeans = KMeans(n_clusters=cluster_number)
 kmeans.fit(df3)
 y_kmeans = kmeans.predict(df3)
 centers = kmeans.cluster_centers_
@@ -109,9 +110,24 @@ plt.plot(centers[:,0],centers[:,1])
 x3=centers[:,0]
 y3=centers[:,1]
 ##############################################################################
-plt.fill_between(x,y,alpha =0.8)
-plt.fill_between(x2,y2, alpha= 0.8)
+
+
+
+plt.fill_between(x,y,alpha =0.8, color='green')
+plt.fill_between(x2,y2,alpha =0.6, color='red')
+
+plt.fill_between(x,y,alpha =0.8, color= 'green')
+plt.fill_between(x2,y2, alpha= 0.8, color ='red')
+plt.fill_between(x3,y3,alpha =0.1, color= 'black')
+
+plt.plot(x,y,alpha =0.8,linewidth=3)
+plt.plot(x2,y2, alpha= 0.8,linewidth=3)
+plt.plot(x3,y3,alpha =0.8,linewidth=3)
+
+
+plt.fill_between(x2,y2,alpha =0.6, color='red')
 plt.fill_between(x3,y3,alpha =0.8)
 
+plt.fill_between(x,y,alpha =0.8)
 
-
+plt.fill_between(x3,y3,alpha =0.8)
