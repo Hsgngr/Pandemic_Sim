@@ -3,7 +3,7 @@ Prework for [Pandemic Simulation with Reinforcement Learning](https://github.com
 This project is for simulating a Pandemic and analyzing the data with Unity
 
 <p>
-<img src="media/sim.gif">
+<img src="media/Simulation.gif">
 </p>
 
 <p>
