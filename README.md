@@ -4,6 +4,8 @@ This project is for simulating a Pandemic and analyzing the data with Unity
 
 <p>
 <img src="images/sim.gif">
-  
- <img src="images/graph.gif">
+</p>
+
+<p>
+<img src="images/graph.gif">
 </p>
